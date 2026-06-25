@@ -263,17 +263,75 @@ strong { font-weight: 700; }
 .home-hero {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(0,198,215,0.15);
-  line-height: 0;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid rgba(0,198,215,0.3);
+  /* Aurora gradient: deep purple-magenta left → teal center → navy right */
+  background:
+    radial-gradient(ellipse 55% 100% at 0%   60%,  #5c0080 0%, transparent 55%),
+    radial-gradient(ellipse 40% 80%  at 18%  30%,  #8800cc 0%, transparent 50%),
+    radial-gradient(ellipse 35% 70%  at 38%  80%,  #3300aa 0%, transparent 50%),
+    radial-gradient(ellipse 45% 90%  at 58%  40%,  #006688 0%, transparent 55%),
+    radial-gradient(ellipse 50% 80%  at 75%  60%,  #007a8a 0%, transparent 50%),
+    radial-gradient(ellipse 40% 60%  at 95%  50%,  #003355 0%, transparent 55%),
+    #0a0d2e;
 }
 
-.home-hero img.hero-image {
+/* Constellation SVG — full bleed overlay */
+.hero-constellation {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  height: auto;
-  display: block;
-  max-height: 420px;
-  object-fit: cover;
-  object-position: center center;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Text container */
+.home-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.home-hero-left h1 {
+  font-family: var(--display-font);
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 0.92;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.home-hero-right {
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+.home-hero-right p {
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .home-hero { height: auto; padding: 3rem 1.5rem; }
+  .home-hero-inner { flex-direction: column; align-items: flex-start; gap: 1.25rem; padding: 0; }
+  .home-hero-right { max-width: 100%; }
 }
 
 /* ── Breadcrumb ────────────────────────────────── */
