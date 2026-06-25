@@ -30,13 +30,13 @@
   --sand:        #F5F0E6;
   --white:       #FFFFFF;
 
-  /* Dark-mode body palette */
-  --bg:          #0B1829;
+  /* Light body palette */
+  --bg:          #FFFFFF;
   --bg-card:     #0F2A45;
   --bg-card-alt: #132F4E;
-  --border:      rgba(0, 198, 215, 0.18);
-  --text:        rgba(255,255,255,0.92);
-  --text-light:  rgba(255,255,255,0.55);
+  --border:      rgba(0, 198, 215, 0.25);
+  --text:        #1A1A1A;
+  --text-light:  #4A5568;
 
   --nav-h: 72px;
   --display-font: 'Refrigerator Deluxe', 'Anton', Impact, sans-serif;
@@ -55,6 +55,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* Ensure page sections sit on white, not inheriting dark card bg */
+.main-content, .breadcrumb { background: var(--bg); }
 
 /* ── Typography ────────────────────────────────── */
 h1, h2, h3, h4, h5 {
