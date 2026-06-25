@@ -71,11 +71,10 @@ strong { font-weight: 600; }
 
 .nav-logo {
   flex-shrink: 0;
-  margin-right: 2.5rem;
 }
 
 .nav-logo img {
-  height: 40px;
+  height: 48px;
   width: auto;
   display: block;
 }
@@ -86,7 +85,7 @@ strong { font-weight: 600; }
   gap: 0.25rem;
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 auto;
 }
 
 .nav-links > li {
