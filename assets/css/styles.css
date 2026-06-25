@@ -169,9 +169,32 @@ strong { font-weight: 600; }
 
 /* ── Page Hero ─────────────────────────────────── */
 .page-hero {
-  background: var(--navy);
   padding: 3.5rem 2.5rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 60% 80% at 15% 60%, #D462AD 0%, transparent 55%),
+    radial-gradient(ellipse 50% 70% at 55% 20%, #00C6D7 0%, transparent 55%),
+    radial-gradient(ellipse 70% 60% at 85% 55%, #00629B 0%, transparent 60%),
+    #0a0e2a;
+  filter: blur(28px) saturate(1.3);
+}
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: rgba(8, 12, 40, 0.62);
 }
 
 .page-hero h1 {
@@ -198,19 +221,34 @@ strong { font-weight: 600; }
 
 /* ── Home Hero ─────────────────────────────────── */
 .home-hero {
-  background: var(--navy);
   padding: 5rem 2.5rem 4.5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
+  isolation: isolate;
 }
 
+/* Gradient background layer — blurred */
 .home-hero::before {
   content: '';
   position: absolute;
+  inset: -20px;
+  z-index: -2;
+  background:
+    radial-gradient(ellipse 60% 80% at 15% 60%, #D462AD 0%, transparent 55%),
+    radial-gradient(ellipse 50% 70% at 55% 20%, #00C6D7 0%, transparent 55%),
+    radial-gradient(ellipse 70% 60% at 85% 55%, #00629B 0%, transparent 60%),
+    #0a0e2a;
+  filter: blur(28px) saturate(1.3);
+}
+
+/* Dark overlay layer — keeps text legible */
+.home-hero::after {
+  content: '';
+  position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0,98,155,0.3) 0%, transparent 60%);
-  pointer-events: none;
+  z-index: -1;
+  background: rgba(8, 12, 40, 0.58);
 }
 
 .home-hero h1 {
