@@ -47,60 +47,62 @@
   </header>
 
   <!-- ── Main Content ── -->
-  <main class="main-content wide">
+  <main style="padding: 5rem 3.5rem 5rem; background: #fff; max-width: 1440px; margin: 0 auto; box-sizing: border-box;">
 
     <!-- Building Hours -->
-    <section style="margin-bottom: 2.5rem;">
-      <p class="section-label">Building Information</p>
-      <h2 style="margin-bottom: 1.5rem;">Building Hours</h2>
-
-      <div class="two-col">
-        <div class="info-block">
-          <h3 class="accent-blue">Design Lab</h3>
-          <table class="hours-table">
-            <tr><td>Monday – Friday</td><td>9:00 am – 5:00 pm</td></tr>
-            <tr><td>Saturday – Sunday</td><td class="closed">Closed</td></tr>
-          </table>
-          <p class="hours-note">Closed on all UC San Diego University Holidays.</p>
+    <section style="margin-bottom: 2rem;">
+      <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+        <!-- Section Header -->
+        <div style="width: 22%; min-width: 200px; flex-shrink: 0;">
+          <span class="section-label">Building Information</span>
+          <h2 class="section-title">Building Hours</h2>
         </div>
-
-        <div class="info-block">
-          <h3 class="accent-cyan">Design &amp; Innovation Building (DIB)</h3>
-          <table class="hours-table">
-            <tr><td>Monday – Friday</td><td>8:00 am – 11:00 pm</td></tr>
-            <tr><td>Saturday – Sunday</td><td>Keycard access required</td></tr>
-          </table>
-          <p class="hours-note">Closed on all UC San Diego University Holidays.</p>
+        <!-- The Design Lab Card -->
+        <div style="flex: 1; min-width: 260px;">
+          <div class="info-block">
+            <h3>The Design Lab</h3>
+            <hr class="card-divider" />
+            <table class="hours-table" style="margin-bottom: 0.5rem;">
+              <tr><td>Monday – Friday</td><td>9:00 am – 5:00 pm</td></tr>
+              <tr><td>Saturday – Sunday</td><td class="closed">Closed</td></tr>
+            </table>
+            <p style="font-size: 0.9rem; margin-top: 0.75rem; color: rgba(255,255,255,0.75); font-style: italic;">Closed on all UC San Diego University Holidays.</p>
+          </div>
+        </div>
+        <!-- DIB Card -->
+        <div style="flex: 1; min-width: 260px;">
+          <div class="info-block">
+            <h3>DIB</h3>
+            <hr class="card-divider" />
+            <table class="hours-table" style="margin-bottom: 0.5rem;">
+              <tr><td>Monday – Friday</td><td>8:00 am – 11:00 pm</td></tr>
+              <tr><td>Saturday – Sunday</td><td>Keycard access required</td></tr>
+            </table>
+            <p style="font-size: 0.9rem; margin-top: 0.75rem; color: rgba(255,255,255,0.75); font-style: italic;">Closed on all UC San Diego University Holidays.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <hr class="section-divider" />
 
-    <!-- Recurring Events -->
-    <section style="margin-bottom: 2.5rem;">
-      <p class="section-label">Events &amp; Calendars</p>
-      <h2 style="margin-bottom: 0.5rem;">Recurring Events</h2>
-      <p style="color: var(--text-light); margin-bottom: 1.25rem;">Design Lab members are encouraged to subscribe to Lab calendars to stay informed on events and programming.</p>
-
-      <div class="info-block">
-        <h3 class="accent-yellow" style="margin-bottom: 1rem;">Lab Event Series</h3>
-        <ul class="calendar-list">
-          <li>
-            <span class="cal-dot" style="background: var(--ucsd-blue);"></span>
-            <span><strong>Design @ Large</strong> — Public lecture series featuring design leaders and innovators</span>
-          </li>
-          <li>
-            <span class="cal-dot" style="background: var(--cyan);"></span>
-            <span><strong>Research Meeting</strong> — Regular internal research presentations and updates</span>
-          </li>
-          <li>
-            <span class="cal-dot" style="background: var(--magenta);"></span>
-            <span><strong>Open Gov</strong> — Open governance sessions for the Design Lab community</span>
-          </li>
-        </ul>
-        <div style="margin-top: 1.25rem;">
-          <a href="#" class="btn btn-outline" style="font-size: 0.88rem;">Subscribe to Lab Calendars</a>
+    <!-- Calendar & Recurring Events -->
+    <section style="margin-bottom: 2rem;">
+      <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+        <!-- Section Header -->
+        <div style="width: 22%; min-width: 200px; flex-shrink: 0; padding-top: 1rem;">
+          <span class="section-label">Calendar &amp; Events</span>
+          <h2 class="section-title">Reoccurring Events</h2>
+        </div>
+        <!-- Calendar Widget -->
+        <div style="flex: 1; min-width: 300px;">
+          <div class="calendar-widget">
+            <h3>Calendar</h3>
+            <hr class="card-divider" />
+            <div class="calendar-embed">
+              <!-- Embed your Google Calendar iframe here -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -108,85 +110,91 @@
     <hr class="section-divider" />
 
     <!-- Emergency Contacts -->
-    <section style="margin-bottom: 2.5rem;">
-      <p class="section-label">Safety</p>
-      <h2 style="margin-bottom: 0.5rem;">Emergency Contacts</h2>
-      <div class="notice notice-red" style="margin: 1rem 0 1.25rem;">
-        In case of a life-threatening emergency, always dial 9-1-1 from a landline or 858-534-4357 from a cell phone.
-      </div>
-
-      <div class="emergency-grid">
-        <div class="emergency-item">
-          <div class="label">Landline</div>
-          <div class="number">9-1-1</div>
+    <section style="margin-bottom: 2rem;">
+      <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+        <div style="width: 22%; min-width: 200px; flex-shrink: 0;">
+          <span class="section-label">Safety</span>
+          <h2 class="section-title">Emergency Contacts</h2>
         </div>
-        <div class="emergency-item">
-          <div class="label">Cell Phone</div>
-          <div class="number">858-534-4357</div>
-        </div>
-        <div class="emergency-item">
-          <div class="label">Emergency Status</div>
-          <div class="number">888-308-8273</div>
-        </div>
-        <div class="emergency-item">
-          <div class="label">Campus Non-Emergency</div>
-          <div class="number">858-534-4357</div>
+        <div style="flex: 1; min-width: 300px;">
+          <div class="info-block">
+            <h3>Emergency Numbers</h3>
+            <hr class="card-divider" />
+            <p style="color: rgba(255,255,255,0.85); margin-bottom: 1rem;">In a life-threatening emergency always dial <strong>9-1-1</strong> from a landline or <strong>858-534-4357</strong> from a cell phone.</p>
+            <div class="emergency-grid" style="margin-top: 0;">
+              <div class="emergency-item" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="label" style="color: rgba(255,255,255,0.7);">Landline</div>
+                <div class="number" style="color: #fff;">9-1-1</div>
+              </div>
+              <div class="emergency-item" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="label" style="color: rgba(255,255,255,0.7);">Cell Phone</div>
+                <div class="number" style="color: #fff;">858-534-4357</div>
+              </div>
+              <div class="emergency-item" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="label" style="color: rgba(255,255,255,0.7);">Emergency Status</div>
+                <div class="number" style="color: #fff;">888-308-8273</div>
+              </div>
+              <div class="emergency-item" style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);">
+                <div class="label" style="color: rgba(255,255,255,0.7);">Non-Emergency</div>
+                <div class="number" style="color: #fff;">858-534-4357</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <hr class="section-divider" />
 
-    <!-- Quick Links -->
+    <!-- Quick Links / Resources -->
     <section>
-      <p class="section-label">Quick Access</p>
-      <h2 style="margin-bottom: 1.5rem;">Resources</h2>
-      <div class="card-grid">
-        <a href="resources/access-information.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>Access Information</h3>
-          <p>Campus card access provisions by affiliation type — faculty, grad students, undergrads, and visiting scholars.</p>
-          <span class="card-link">Learn More →</span>
-        </a>
-        <a href="resources/room-reservations.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>Room Reservations</h3>
-          <p>Reserve Design Lab conference rooms (311 &amp; 361) and DIB event spaces and meeting rooms.</p>
-          <span class="card-link">Reserve a Room →</span>
-        </a>
-        <a href="resources/operations.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>Operations</h3>
-          <p>Contact the Design Lab Operations team for questions about space, policies, and facilities.</p>
-          <span class="card-link">Get in Touch →</span>
-        </a>
-        <a href="contact/staff-directory.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>Staff Directory</h3>
-          <p>Faculty, ambassadors, and research staff affiliated with the Design Lab at UC San Diego.</p>
-          <span class="card-link">View Directory →</span>
-        </a>
-        <a href="resources/communications.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>Communications</h3>
-          <p>Brand guidelines, logo assets, and communications contact for the Design Lab.</p>
-          <span class="card-link">View Resources →</span>
-        </a>
-        <a href="faq.html" class="card" style="text-decoration: none; color: inherit;">
-          <h3>FAQs</h3>
-          <p>Answers to the most common questions from Design Lab members about access, spaces, and events.</p>
-          <span class="card-link">Browse FAQs →</span>
-        </a>
+      <div style="display: flex; gap: 1.5rem; align-items: flex-start; flex-wrap: wrap;">
+        <div style="width: 22%; min-width: 200px; flex-shrink: 0;">
+          <span class="section-label">Quick Access</span>
+          <h2 class="section-title">Resources</h2>
+        </div>
+        <div style="flex: 1; min-width: 300px;">
+          <div class="card-grid" style="margin-top: 0;">
+            <a href="resources/access-information.html" class="card" style="text-decoration: none;">
+              <h3>Access Info</h3>
+              <hr class="card-divider" />
+              <p>Campus card access provisions by affiliation — faculty, grad students, undergrads, and visiting scholars.</p>
+              <span class="card-link">Learn More →</span>
+            </a>
+            <a href="resources/room-reservations.html" class="card" style="text-decoration: none;">
+              <h3>Room Reservations</h3>
+              <hr class="card-divider" />
+              <p>Reserve Design Lab conference rooms (311 &amp; 361) and DIB event spaces.</p>
+              <span class="card-link">Reserve a Room →</span>
+            </a>
+            <a href="resources/operations.html" class="card" style="text-decoration: none;">
+              <h3>Operations</h3>
+              <hr class="card-divider" />
+              <p>Contact the Design Lab Operations team for questions about space, policies, and facilities.</p>
+              <span class="card-link">Get in Touch →</span>
+            </a>
+            <a href="contact/staff-directory.html" class="card" style="text-decoration: none;">
+              <h3>Staff Directory</h3>
+              <hr class="card-divider" />
+              <p>Faculty, ambassadors, and research staff affiliated with the Design Lab at UC San Diego.</p>
+              <span class="card-link">View Directory →</span>
+            </a>
+            <a href="resources/communications.html" class="card" style="text-decoration: none;">
+              <h3>Communications</h3>
+              <hr class="card-divider" />
+              <p>Brand guidelines, logo assets, and communications contact for the Design Lab.</p>
+              <span class="card-link">View Resources →</span>
+            </a>
+            <a href="faq.html" class="card" style="text-decoration: none;">
+              <h3>FAQs</h3>
+              <hr class="card-divider" />
+              <p>Answers to the most common questions from Design Lab members about access, spaces, and events.</p>
+              <span class="card-link">Browse FAQs →</span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
-
-    <!-- Mailing Address -->
-    <div style="margin-top: 3rem; padding: 1.5rem 2rem; background: var(--white); border-radius: 8px; border: 1px solid var(--border); display: flex; align-items: flex-start; gap: 1.5rem; flex-wrap: wrap;">
-      <div>
-        <p class="section-label" style="margin-bottom: 0.25rem;">Mailing Address</p>
-        <p style="margin: 0; font-size: 1rem; line-height: 1.7;">
-          UCSD Design Lab<br />
-          Design &amp; Innovation Building<br />
-          9500 Gilman Drive, MC0425<br />
-          La Jolla, CA 92093
-        </p>
-      </div>
-    </div>
 
   </main>
 

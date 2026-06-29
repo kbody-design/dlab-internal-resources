@@ -352,22 +352,33 @@ strong { font-weight: 700; }
 /* ── Section Headers ───────────────────────────── */
 .section-label {
   font-family: var(--body-font);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--cyan);
-  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: var(--ucsd-blue);
+  margin-bottom: 0.25rem;
   display: block;
+  text-transform: none;
+}
+
+.section-title {
+  font-family: var(--display-font);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--cyan);
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+  margin: 0 0 0.5rem;
+  line-height: 1.05;
 }
 
 .section-divider {
   border: none;
-  border-top: 1px solid var(--border);
-  margin: 2.5rem 0;
+  border-top: 1px solid #94a3b8;
+  margin: 2rem 0;
 }
 
-/* ── Cards ─────────────────────────────────────── */
+/* ── Cards (quick-links grid) ──────────────────── */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -376,34 +387,49 @@ strong { font-weight: 700; }
 }
 
 .card {
-  background: var(--bg-card);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  padding: 1.75rem 1.5rem;
-  transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+  background: var(--ucsd-blue);
+  border-radius: 40px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  padding: 1.75rem 2.75rem;
+  transition: box-shadow 0.2s, transform 0.15s;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  color: #fff;
 }
 
 .card:hover {
-  box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.3);
   transform: translateY(-3px);
-  border-color: rgba(0,198,215,0.4);
   text-decoration: none;
 }
 
 .card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
-  color: var(--white);
+  font-family: var(--display-font);
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.card .card-divider {
+  width: 100%;
+  height: 1px;
+  background: #94a3b8;
+  margin: 1rem 0 0.75rem;
+  border: none;
+  display: block;
 }
 
 .card p {
-  font-size: 0.93rem;
-  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.9);
   flex: 1;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 .card-link {
@@ -411,40 +437,93 @@ strong { font-weight: 700; }
   align-items: center;
   gap: 0.3rem;
   margin-top: 1.1rem;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--cyan);
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-family: var(--body-font);
 }
 
-/* ── Info Blocks ───────────────────────────────── */
+/* ── Calendar Widget ───────────────────────────── */
+.calendar-widget {
+  background: var(--ucsd-blue);
+  border-radius: 40px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  padding: 1.25rem 3rem 2.25rem;
+  color: #fff;
+}
+
+.calendar-widget h3 {
+  font-family: var(--display-font);
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.calendar-widget .card-divider {
+  width: 100%;
+  height: 1px;
+  background: #94a3b8;
+  margin: 1.25rem 0 1rem;
+  border: none;
+  display: block;
+}
+
+.calendar-widget .calendar-embed {
+  width: 100%;
+  height: 363px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* ── Info Blocks / Cards ───────────────────────── */
 .info-block {
-  background: var(--bg-card);
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  padding: 1.75rem 2rem;
+  background: var(--ucsd-blue);
+  border-radius: 40px;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+  padding: 1.5rem 2.75rem 2rem;
   margin-bottom: 1.5rem;
+  color: #fff;
 }
 
 .info-block h3 {
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(255,255,255,0.1);
-  font-size: 1.3rem;
+  font-family: var(--display-font);
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
-.info-block h3.accent-cyan  { border-bottom-color: var(--cyan); }
-.info-block h3.accent-blue  { border-bottom-color: var(--ucsd-blue); }
-.info-block h3.accent-yellow{ border-bottom-color: var(--yellow); }
-.info-block h3.accent-magenta{ border-bottom-color: var(--magenta); }
+.info-block .card-divider {
+  width: 100%;
+  height: 1px;
+  background: #94a3b8;
+  margin: 1.25rem 0 0.75rem;
+  border: none;
+  display: block;
+}
 
 .info-block p,
-.info-block li { color: rgba(255,255,255,0.75); }
+.info-block li { color: rgba(255,255,255,0.9); }
 
-.info-block a { color: var(--cyan); }
-.info-block a:hover { color: var(--white); }
+.info-block a { color: #fff; text-decoration: underline; }
+.info-block a:hover { color: rgba(255,255,255,0.8); }
+
+/* Keep accent modifiers for inner border colors on h3 — no longer needed
+   but kept for backwards compat on resource pages */
+.info-block h3.accent-cyan,
+.info-block h3.accent-blue,
+.info-block h3.accent-yellow,
+.info-block h3.accent-magenta { border-bottom: none; }
 
 /* ── Two-column Layout ─────────────────────────── */
 .two-col {
@@ -466,18 +545,21 @@ strong { font-weight: 700; }
 
 .hours-table td {
   padding: 0.6rem 0.25rem;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.9);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
 .hours-table td:first-child {
   font-weight: 700;
-  color: var(--white);
+  color: #fff;
   width: 55%;
 }
 
 .hours-table td.closed {
-  color: #ff6b6b;
+  color: #fca5a5;
   font-weight: 700;
 }
 
