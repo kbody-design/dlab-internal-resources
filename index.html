@@ -94,14 +94,53 @@
           <span class="section-label">Calendar &amp; Events</span>
           <h2 class="section-title">Reoccurring Events</h2>
         </div>
-        <!-- Calendar Widget -->
-        <div style="flex: 1; min-width: 300px;">
+        <!-- Calendar Widget + Recurring Events -->
+        <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 1.25rem;">
+          <!-- Calendar embed card -->
           <div class="calendar-widget">
             <h3>Calendar</h3>
             <hr class="card-divider" />
             <div class="calendar-embed">
-              <!-- Embed your Google Calendar iframe here -->
+              <!-- Replace the src below with your Google Calendar embed URL:
+                   Google Calendar → Settings → [your calendar] → Integrate → "Embed code"
+                   Copy just the src="..." value and paste it below -->
+              <iframe
+                src="https://calendar.google.com/calendar/embed?src=REPLACE_WITH_YOUR_CALENDAR_ID%40group.calendar.google.com&ctz=America%2FLos_Angeles&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&mode=MONTH"
+                style="width:100%;height:363px;border:0;border-radius:8px;"
+                frameborder="0"
+                scrolling="no"
+                title="Design Lab Calendar">
+              </iframe>
             </div>
+          </div>
+
+          <!-- Recurring events card -->
+          <div class="info-block">
+            <h3>Recurring Events</h3>
+            <hr class="card-divider" />
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.85rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); flex-shrink: 0; margin-top: 0.45rem;"></span>
+                <div>
+                  <strong style="font-size: 1.1rem; letter-spacing: 0.04em;">Design @ Large</strong>
+                  <p style="margin: 0.15rem 0 0; font-size: 0.95rem; color: rgba(255,255,255,0.75);">Public lecture series featuring design leaders and innovators</p>
+                </div>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--yellow); flex-shrink: 0; margin-top: 0.45rem;"></span>
+                <div>
+                  <strong style="font-size: 1.1rem; letter-spacing: 0.04em;">Research Meeting</strong>
+                  <p style="margin: 0.15rem 0 0; font-size: 0.95rem; color: rgba(255,255,255,0.75);">Regular internal research presentations and updates for lab members</p>
+                </div>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.85rem;">
+                <span style="width: 10px; height: 10px; border-radius: 50%; background: var(--magenta); flex-shrink: 0; margin-top: 0.45rem;"></span>
+                <div>
+                  <strong style="font-size: 1.1rem; letter-spacing: 0.04em;">Open Gov</strong>
+                  <p style="margin: 0.15rem 0 0; font-size: 0.95rem; color: rgba(255,255,255,0.75);">Open governance sessions for the Design Lab community</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
